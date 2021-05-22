@@ -36,8 +36,6 @@ class ChecklistAdapter(
 ) :
     MyRecyclerViewAdapter(activity, recyclerView, itemClick), ItemTouchHelperContract {
 
-    private lateinit var crossDrawable: Drawable
-    private lateinit var checkDrawable: Drawable
     private var touchHelper: ItemTouchHelper? = null
     private var startReorderDragListener: StartReorderDragListener
 
@@ -109,8 +107,6 @@ class ChecklistAdapter(
 
     private fun initDrawables() {
         val res = activity.resources
-        crossDrawable = res.getColoredDrawableWithColor(R.drawable.ic_cross_vector, res.getColor(R.color.md_red_700))
-        checkDrawable = res.getColoredDrawableWithColor(R.drawable.ic_check_vector, res.getColor(R.color.md_green_700))
     }
 
     private fun renameChecklistItem() {
@@ -198,11 +194,9 @@ class ChecklistAdapter(
                 }
             }
 
-            checklist_image.setImageDrawable(if (checklistItem.isDone) checkDrawable else crossDrawable)
-            checklist_image.beVisibleIf(showIcons && selectedKeys.isEmpty())
             checklist_holder.isSelected = isSelected
 
-            checklist_drag_handle.beVisibleIf(selectedKeys.isNotEmpty())
+            checklist_drag_handle.beVisibleIf(showIcons)
             checklist_drag_handle.applyColorFilter(textColor)
             checklist_drag_handle.setOnTouchListener { v, event ->
                 if (event.action == MotionEvent.ACTION_DOWN) {
