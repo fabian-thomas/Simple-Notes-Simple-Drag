@@ -6,6 +6,8 @@ The maintainer seems to not like these changes, even with a toggle in the settin
 You can expect me to rebase against upstream quickly after a new version is released.
 I may also add debug apks to the releases on this fork if needed.
 
+For reference check [this pull request](https://github.com/SimpleMobileTools/Simple-Notes/pull/420) and [this issue](https://github.com/SimpleMobileTools/Simple-Notes/issues/412).
+
 ![An image of a checklist where the drag icons are all shown by default.](changes.png)
 
 # Simple Notes
