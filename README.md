@@ -1,3 +1,13 @@
+This Simple-Notes fork always shows the checklist drag&drop icon instead of the checkmarks.
+This allows for quick reordering in checklists.
+
+The code changes were done by [@leafar-tb](https://github.com/leafar-tb) in 2021.
+The maintainer seems to not like these changes, even with a toggle in the settings, therefore I will maintain this patch from now on.
+You can expect me to rebase against upstream quickly after a new version is released.
+I may also add debug apks to the releases on this fork if needed.
+
+![An image of a checklist where the drag icons are all shown by default.](changes.png)
+
 # Simple Notes
 <img alt="Logo" src="graphics/icon.png" width="120" />
 
